@@ -1,4 +1,4 @@
-package com.example.theprojecttryy;
+package com.lief.TRYY;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

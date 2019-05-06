@@ -1,4 +1,4 @@
-package com.example.theprojecttryy;
+package com.lief.TRYY;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

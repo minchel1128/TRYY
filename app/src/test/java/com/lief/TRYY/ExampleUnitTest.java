@@ -1,4 +1,4 @@
-package com.example.theprojecttryy;
+package com.lief.TRYY;
 
 import org.junit.Test;
 
