@@ -1,0 +1,11 @@
+diff a/debug.log b/debug.log	(rejected hunks)
+@@ -7,3 +7,9 @@
+ [0508/010815.025:ERROR:file_io_win.cc(179)] CreateFile C:\Users\kims\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: �׼����� �źεǾ����ϴ�. (0x5)
+ [0508/010815.027:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: �������� �������ϴ�. (0x6D)
+ [0508/010815.028:ERROR:file_io_win.cc(179)] CreateFile C:\Users\kims\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: �׼����� �źεǾ����ϴ�. (0x5)
++[0514/091942.536:ERROR:file_io_win.cc(179)] CreateFile C:\Users\kims\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: �׼����� �źεǾ����ϴ�. (0x5)
++[0514/091942.541:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: �������� �������ϴ�. (0x6D)
++[0514/091942.542:ERROR:file_io_win.cc(179)] CreateFile C:\Users\kims\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: �׼����� �źεǾ����ϴ�. (0x5)
++[0514/092000.485:ERROR:file_io_win.cc(179)] CreateFile C:\Users\kims\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: �׼����� �źεǾ����ϴ�. (0x5)
++[0514/092000.488:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: �������� �������ϴ�. (0x6D)
++[0514/092000.489:ERROR:file_io_win.cc(179)] CreateFile C:\Users\kims\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: �׼����� �źεǾ����ϴ�. (0x5)
