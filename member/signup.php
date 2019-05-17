@@ -1,5 +1,6 @@
 <?php   
-include "../db.php"; ?>
+include "../db.php"; 
+?>
 <!DOCTYPE html>
 <html lang="kr">
 <!-- Start Head -->
@@ -65,28 +66,29 @@ START MODULE AREA 1: header1
       <p class="MOD_HEADER1_Slogan">식물을 키우는 사람들의 생각을 모아놓은곳</p>
     </div>
     
-	  <div data-layout="al16 de6" class="MOD_HEADER1_Details">						
-			<form method="post" action="/member/login_ok.php">
-				<table align="center" border="0" cellspacing="0" width="300">
-        			<tr>
-						<td width="130" colspan="1"> 
-						<input type="email" name="email" placeholder="이메일"></input>
-						</td>
-						<td rowspan="2" align="center" width="100" > 
+	 <div data-layout="al16 de6" class="MOD_HEADER1_Details">						
+		<form method="post" action="/member/login_check.php">
+			<table align="center" border="0" cellspacing="0" width="400">
+				<tr>
+					<td width="300" colspan="1"> 
+						<input type="email" name="userid" placeholder="이메일"></input>
+					</td>
+					<td rowspan="3" colspan="1" align="center" width="130" > 
 						<button type="submit" class="btn" > 로그인 </button>
-						</td>
-						<td rowspan="2" align="center" class="signup"> 
+					</td>
+					<td rowspan="3" colspan="1" align="center" width="130"> 
 						<a href="/member/signup.php" class="btn">회원가입</a>
-						</td>
-					</tr>
-					<tr>
-						<td width="130" colspan="1"> 
+					</td>
+				</tr>
+				<tr>
+					<td width="300" colspan="1"> 
 						<input type="password" name="userpw" placeholder="비밀번호"></input>
-						</td>
-					</tr>
-				</table>
-			</form>
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
+	
   </div>
 </header>
 <!--
@@ -144,38 +146,38 @@ START MODULE AREA 2: Menu 1
 
 				<!-- member_box2 -->
 				<div class="ico_startxt"><span class="ico_star">필수 입력 사항</span></div>
-				<form method="post">
+				<form method="post" action="/member/signup_check.php">
+				<fieldset>
 					<legend class="hide">회원가입</legend>
 					<div class="member_box2">
 						<div class="input_wrap type2" style="height:190px;">
 							<div>
 								<label for="regID">아이디<i class="ico_star"></i></label>
-								<input type="text" name="regID" id="regID" placeholder="이메일 형식(주로 이용하는 이메일 사용을 권합니다.)" onchange="emailCheck();" autocomplete="off/" class="text">
+								<input type="text" name="regid" id="regID" placeholder="이메일 형식(주로 이용하는 이메일 사용을 권합니다.)" autocomplete="off/" class="text">
 							</div>	
 							<div>
 								<label for="regNick">닉네임<i class="ico_star"></i></label>
-								<input type="text" name="regNick" id="regNick" placeholder="한글 10자 이내, 영문 20자 이내" autocomplete="off/" class="text">
+								<input type="text" name="regname" id="regNick" placeholder="한글 10자 이내, 영문 20자 이내" autocomplete="off/" class="text">
 							</div>
 							<div>
 								<label for="regPasswd">비밀번호<i class="ico_star"></i></label>
-								<input type="password" name="regPasswd" id="regPasswd" placeholder="영문자/숫자/특수문자(!@#$%^&amp;*_-) 혼용 8자이상 16자 이하" autocomplete="off/">
+								<input type="password" name="regpw" id="regPasswd" placeholder="영문자/숫자/특수문자(!@#$%^&amp;*_-) 혼용 8자이상 16자 이하" autocomplete="off/">
 							</div>
 							<div>
 								<label for="regChkPasswd">비밀번호 확인<i class="ico_star"></i></label>
-								<input type="password" name="regChkPasswd" id="regChkPasswd" placeholder="영문자/숫자/특수문자(!@#$%^&amp;*_-) 혼용 8자이상 16자 이하" autocomplete="off/">
+								<input type="password" name="regpw2" id="regChkPasswd" placeholder="영문자/숫자/특수문자(!@#$%^&amp;*_-) 혼용 8자이상 16자 이하" autocomplete="off/">
 							</div>
 							<div style="height:17px;">
 								<p class="txt_notice2" id="tdError" style="display:none; top:0px; bottom:0px;"></p>
 							</div>
 						</div>
 					</div>
-					<!-- //member_box2 -->
 					<p></p>
-				
 					<div class="btn_center">
-						<button type="submit" id="regProcessBtn" class="btn_blue lg btn" href="/member/signup_check.php">회원가입</button>
+						<button type="submit" id="regProcessBtn" class="btn_blue lg btn">회원가입</button>
 					</div>
 				</fieldset>
+				</form>
 </div>
 </body>
 </html>

@@ -1,11 +1,19 @@
 <?php
 // DB 연결
-$mysqli = new mysqli('localhost', 'root', 'root', 'tryy');
+session_start();
+$db = new mysqli('localhost', 'root', 'root', 'tryy');
 
-if ($mysqli->connect_errno) {
+if ($db->connect_errno) {
     die('Connection Error ('.$mysqli->connect_errno.'): '.
-    $mysqli->connect_error);
+    $db->connect_error);
 } else {
     echo ("");
 }
+
+function mq($sql)
+	{
+		global $db;
+		return $db->query($sql);
+	}
+
 ?>
