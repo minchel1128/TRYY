@@ -262,7 +262,7 @@ figure {
 }
 
 /* Forms Generic */
-input[type=search], input[type=text], input[type=email], input[type=tel] {
+input[type=search], input[type=text], input[type=email], input[type=tel], input[type=password] {
   padding: 0.4em;
 }
 
