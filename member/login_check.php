@@ -1,5 +1,5 @@
 <?php   
-include "../db.php"; 
+include "../db.php";
 
 if(!isset($_POST['userid']) || !isset($_POST['userpw'])) exit;
 $id = $_POST['userid'];
@@ -8,7 +8,7 @@ $pw = $_POST['userpw'];
 $result=mq("SELECT * FROM member WHERE email='$id'");
 
 if($result->num_rows==1) {
-	$row=$result->fetch_array(MYSQLI_ASSOC);
+	$row = $result->fetch_array(MYSQLI_ASSOC); // 
 	if($row['pw']==$pw){
 		$_SESSION['id'] = $id;
 		$_SESSION['name'] = $row['nickname'];
