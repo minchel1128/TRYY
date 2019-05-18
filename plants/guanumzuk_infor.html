@@ -1,3 +1,6 @@
+<?php   
+include "./db.php"; 
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <!-- Start Head -->
@@ -9,25 +12,6 @@
 
 	<link rel="stylesheet" href="../assets/css/style.min.css">
 	<link rel="stylesheet" href="../assets/css/modules.css">
-
-	<!-- Canonical URL usage -->
-	<link rel="canonical" href="https://aperitif.io/">
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:url"                content="https://aperitif.io/" />
-	<meta property="og:title"              content="Aperitif | The web template generator" />
-	<meta property="og:description"        content="Aperitif is a rapid web template generation tool." />
-	<meta property="og:image"              content="https://aperitif.io/img/aperitif-facebook.png" />
-	<meta property="og:image:width"        content="1200" />
-	<meta property="og:image:height"       content="630" />
-
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@Aperitif">
-	<meta name="twitter:creator" content="@Aperitif">
-	<meta name="twitter:title" content="Aperitif - The web template generator">
-	<meta name="twitter:description" content="Aperitif is a rapid web template generation tool.">
-	<meta name="twitter:image" content="https://aperitif.io/img/aperitif-card.png">
 
 	<!-- Google Structured Data -->
 	<script type="application/ld+json">
@@ -56,28 +40,46 @@ START MODULE AREA 1: header1
 <header class="MOD_HEADER1">
   <div data-layout="_r">
     <div data-layout="al16 de10" class="MOD_HEADER1_Title">
-      <button type="button"><a href="index.html"><img src="../assets/image/Tryy(2).jpg" width="30" height="30"></a></button>
-      <!--<h1 class="MOD_HEADER1_TextLogo">TRYY</h1> -->
+      <button><a href="../index.html"><img src="../assets/image/Tryy(2).jpg"/></a></button>
       <p class="MOD_HEADER1_Slogan">식물을 키우는 사람들의 생각을 모아놓은곳</p>
     </div>
-    <div data-layout="al16 de6" class="MOD_HEADER1_Details">
-      <p class="MOD_HEADER1_Phone">연락처: <a href="tel:#">01055328022</a></p>
-      <!-- Search -->
-      <form name="Header1" action="" method="">
-        <input id="MOD_HEADER1_Search" class="MOD_HEADER1_Search" type="search" placeholder="검색"></input>
-        <label for="MOD_HEADER1_Search">검색</label>
-      </form>
-      <!-- Facebook SVG -->
-      <a href="#" class="smIcon"><svg class="fb" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm16 7h-1.923c-.616 0-1.077.252-1.077.889v1.111h3l-.239 3h-2.761v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg></a>
-      <!-- Twitter SVG -->
-      <a href="#" class="smIcon"><svg class="tw" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm18.862 9.237c.208 4.617-3.235 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.079-4.03 3.198-4.03.944 0 1.797.398 2.396 1.037.748-.147 1.451-.42 2.085-.796-.245.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.44.656-.997 1.234-1.638 1.697z"/></svg></a>
-      <!-- LinkedIn SVG -->
-      <a href="#" class="smIcon"><svg class="li" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-      <!-- Google Plus SVG-->
-      <a href="#" class="smIcon"><svg class="gp" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8.667 16.667c-2.581 0-4.667-2.087-4.667-4.667s2.086-4.667 4.667-4.667c1.26 0 2.313.46 3.127 1.22l-1.267 1.22c-.347-.333-.954-.72-1.86-.72-1.593 0-2.893 1.32-2.893 2.947s1.3 2.947 2.893 2.947c1.847 0 2.54-1.327 2.647-2.013h-2.647v-1.6h4.406c.041.233.074.467.074.773 0 2.666-1.787 4.56-4.48 4.56zm11.333-4h-2v2h-1.333v-2h-2v-1.333h2v-2h1.333v2h2v1.333z"/></svg></a>
-      <!-- Pinterest SVG -->
-      <a href="#" class="smIcon"><svg class="pi" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm12 20c-.825 0-1.62-.125-2.369-.357.326-.531.813-1.402.994-2.098l.499-1.901c.261.498 1.023.918 1.833.918 2.413 0 4.151-2.219 4.151-4.976 0-2.643-2.157-4.62-4.932-4.62-3.452 0-5.286 2.317-5.286 4.841 0 1.174.625 2.634 1.624 3.1.151.07.232.039.268-.107l.222-.907c.019-.081.01-.15-.056-.23-.331-.4-.595-1.138-.595-1.825 0-1.765 1.336-3.472 3.612-3.472 1.965 0 3.341 1.339 3.341 3.255 0 2.164-1.093 3.663-2.515 3.663-.786 0-1.374-.649-1.185-1.446.226-.951.663-1.977.663-2.664 0-.614-.33-1.127-1.012-1.127-.803 0-1.448.831-1.448 1.943 0 .709.239 1.188.239 1.188s-.793 3.353-.938 3.977c-.161.691-.098 1.662-.028 2.294-2.974-1.165-5.082-4.06-5.082-7.449 0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg></a>
-    </div>
+	
+	<div data-layout="al16 de6" class="MOD_HEADER1_Details">	
+<?php	
+	if(isset($_SESSION['id'])) {
+		echo $_SESSION['name'];
+?>
+	<p>님 반갑습니다</p>
+	<button type="button" onclick="location.href='/member/logout.php'">로그아웃</button>
+<?php
+	}
+	else {
+?>	
+		<form method="post" action="/member/login_check.php">
+			<table align="center" border="0" cellspacing="0" width="400">
+				<tr>
+					<td width="300" colspan="1"> 
+						<input type="email" name="userid" placeholder="이메일"></input>
+					</td>
+					<td rowspan="3" colspan="1" align="center" width="130" > 
+						<button type="submit" class="btn" > 로그인 </button>
+					</td>
+					<td rowspan="3" colspan="1" align="center" width="130"> 
+						<a href="/member/signup.php" class="btn">회원가입</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="300" colspan="1"> 
+						<input type="password" name="userpw" placeholder="비밀번호"></input>
+					</td>
+				</tr>
+			</table>
+		</form>
+<?php
+	}
+?>
+	</div>
+	  
   </div>
 </header>
 <!--
@@ -137,35 +139,35 @@ START MODULE AREA 3: Image | Text | Text
 <section>
   <div data-layout="_r">
     <div data-layout="ch8 ec-third">
-      <img src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F5067_000_1%2F20171113175931642_ICYLYH2HG.jpg%2Fib71_121_i1.jpg%3Ftype%3Dw690_fst_n%26wm%3DY%22&twidth=352&theight=530&opts=17" alt="테이블 야자">
+      <img src="http://mblogthumb1.phinf.naver.net/MjAxNzA2MTJfMjMy/MDAxNDk3MjM2MTExOTk0.VmpERvn1ztPI3yd6wKFYWChFdZRsl-Ls5wWH3f7MlM4g.2dqt9KMgBW6Aw0_xHYkySEOEpN0d1n9EehelhYI4oPAg.JPEG.mathy7/%EA%B4%80%EC%9D%8C%EC%A3%BD.jpg?type=w800" alt="테이블 야자">
     </div>
     <div data-layout="ch8 ec-third">
       <ul>
-        <li>이름 : 아레카야자</li>
+        <li>이름 : 관음죽</li>
 		<p></p>
         <li>관리 수준 : 경험자</li>
 		<p></p>
-        <li>관리 요구 : 필요함</li>
+        <li>관리 요구 : 보통 (약간 잘 견딤)</li>
 		<p></p>
-        <li>생육 온도 : 21~25℃ 최소 13℃ 이상</li>
+        <li>생육 온도 : 16~20℃ 최소 5℃ 이상</li>
 		<p></p>
-        <li>배치 장소 : 햇빛이 어느정도 요구되어 거실, 발코니에서 키우는것이 좋음</li>
+        <li>배치 장소 : 낮은 광도, 중간 광도, 높은 광도 모두 생장이 가능함</li>
 		<p></p>
-        <li>물주기 : 4계절 모두 화분 토양의 표면이 마른경우</li>
+        <li>물주기 : 토양 표면이 말랐을때 충분히 관수함, 겨울의 경우 흙 대부분이 말랐을때 충분히 관수함</li>
 		<p></p>
-        <li>비료 정보 : 비료를 많이 요구함</li>
+        <li>비료 정보 : 비료를 보통 요구함</li>
       </ul> <!------------------- 수정완료 -->
     </div>
     <div data-layout="ec-third">
         <ul>
-            <li>번식 방법 : 파종</li>
+            <li>번식 방법 : 파종,분주</li>
 			<p></p>
-            <li>병충해 관리 : 실내가 너무 건조하면 응애가 생길 수 있으며 잎 끝이 갈색으로 변한다.</li>
+            <li>병충해 관리 : 일반적으로 병이나 해충이 없으나 매우 드물게 응애가 생기기도 한다.</li>
 			<p></p>
             <li>습도 : 40~70%</li><p></p>
-            <li>성장 속도 : 빠름</li><p></p>
-            <li>생육 형태 : 직립형, 관목형</li><p></p>
-            <li>성민이 바보</li>
+            <li>성장 속도 : 느림</li><p></p>
+            <li>생육 형태 : 관목형</li><p></p>
+            <li>향기 : 없음</li>
           </ul> <!----------------- 수정완료 -->
     </div>
   </div>
@@ -180,16 +182,15 @@ END MODULE AREA 3: Image | Text | Text
 <section>
   <div data-layout="_r">
     <div data-layout="ch-half">
-      <p>생육속도가 빠르고 경험을 요하는 관리자가 키울수 있는 공기 정화 식물이다.</p>
-      <p>가정에서 키우면 보통 1m정도 자라나며 환경이 좋은 경우 2m까지 자란다.</p>
-      <p>일부 가지에만 염분을 축적하는 독특한 성질을 가지고 있으며 축적된 염분이 포화상태에 이르렀을 때 그 가지가 말라죽게 되므로 이때는 빨리 가지를 잘라주도록 한다.</p>
-      <p>줄기가 황색을 나타내는 것은 병든 것이 아니라 원래 특성이다.</p>
-      <p>증산율이 높기 때문에 수경재배나 지하관수로도 키울 수 있다.</p>
+      <p>손바닥 모양의 잎을 가진 집에서 기르기 쉽고 그늘과 추위에도 잘 견디고 병해충에도 강하기기 때문에 기르기 쉬운 식물이다.</p>
+	  <p>자라는 속도가 느려서 관리가 편하다. 반엽이 들어있는 종은 색상이 더욱 아름답다.</p> 
+      <p>관음죽을 지하관수나 수경재배로 기르는 경우에는 수돗물 속의 염분이나 미네랄이 잎 끝에 축적되어 갈색으로 변할 수도 있다.</p>
+      <p>이런 현상이 나타날 때에는 갈색으로 변한 부분만 가위로 잘라내면 된다. 그러면 염분도 제거할 수 있고 특유의 톱니모양의 녹색 잎을 유지시킬 수 있다.</p>
     </div>
     <div data-layout="ch-half">
-      <p>NASA가 지정한 실내공기 정화 식물 중에서 가장 일등공신으로 꼽히는 식물로 거실이나 사무실 등의 공기정화에 필수적인 식물이다.</p>
-      <p>비교적 키우기 쉽지만 너무 강한 직사광선이나 건조한 공기는 싫어한다. </p>
-      <p>야자류 중에서는 질감도 부드럽고 여성스러운 느낌을 주며 가습기를 대신할 정도로 증산량이 뛰어난 식물이다.</p>
+      <p>생장 높이는 200cm, 너비는 70cm이다.</p>
+      <p>2년에 한 번씩 분갈이를 해 주면 좋다.</p>
+      <p>컨테이너, 경계, 차폐, 방풍/ 암모니아 흡수에 최강인 관엽식물이다.</p>
     </div>
   </div>
 </section>
@@ -203,38 +204,34 @@ START MODULE AREA 5: Feature 1
 <section class="MOD_FEATURE">
   <div data-layout="_r">
     <div data-layout="ch8 ec4">
-      <a href="#" class="MOD_FEATURE_Container">
-        <img class="MOD_FEATURE_Picture" src="../assets/image/tablepalm/테이블야자2.jpg" alt="테이블야자">
+      <a href="../plants/sansevieria.html" class="MOD_FEATURE_Container">
+        <img class="MOD_FEATURE_Picture" src="http://thum.buzzni.com/unsafe/640x640/center/smart/http://image.hnsmall.com/images/goods/863/12354863_g.jpg" alt="산세베리아">
         <div class="MOD_FEATURE_TextContainer">
-          <p class="MOD_FEATURE_Title" data-theme="_ts2">테이블 야자</p>
-          <p class="MOD_FEATURE_Description">테이블 야자들을 화분에 심어 놓은 것이다.</p>
+          <p class="MOD_FEATURE_Title" data-theme="_ts2">산세베리아 알아보기</p> 
+        </div>
+      </a>
+    </div>
+    <div data-layout="ch8 ec4">
+      <a href="../plants/arekayaja_infor.html" class="MOD_FEATURE_Container">
+        <img class="MOD_FEATURE_Picture" src="data:image/jpeg;base64,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"height="400" width="300"alt="">
+        <div class="MOD_FEATURE_TextContainer">
+          <p class="MOD_FEATURE_Title" data-theme="_ts2">아레카야자 알아보기</p>
+        </div>
+      </a>
+    </div>
+    <div data-layout="ch8 ec4">
+      <a href="../plants/daenamuyaja_infor.html" class="MOD_FEATURE_Container">
+        <img class="MOD_FEATURE_Picture" src="https://i2.wp.com/dilite.co.kr/wp-content/uploads/2018/04/bamboo-palm.jpg?resize=640%2C598" alt="대나무야자">
+        <div class="MOD_FEATURE_TextContainer">
+          <p class="MOD_FEATURE_Title" data-theme="_ts2">대나무야자 알아보기</p>
         </div>
       </a>
     </div>
     <div data-layout="ch8 ec4">
       <a href="#" class="MOD_FEATURE_Container">
-        <img class="MOD_FEATURE_Picture" src="../assets/image/tablepalm/테이블야자3.webp" alt="테이블야자">
+        <img class="MOD_FEATURE_Picture" src="http://mstatic2.e-himart.co.kr/contents/goods/00/00/87/62/41/0000876241__PROD96888007__M_640_640.jpg" alt="아이비">
         <div class="MOD_FEATURE_TextContainer">
-          <p class="MOD_FEATURE_Title" data-theme="_ts2">테이블 야자</p>
-          <p class="MOD_FEATURE_Description">테이블 야자를 화분에 심어 놓은 모습</p>
-        </div>
-      </a>
-    </div>
-    <div data-layout="ch8 ec4">
-      <a href="#" class="MOD_FEATURE_Container">
-        <img class="MOD_FEATURE_Picture" src="../assets/image/tablepalm/테이블야자4.jpg" alt="테이블야자">
-        <div class="MOD_FEATURE_TextContainer">
-          <p class="MOD_FEATURE_Title" data-theme="_ts2">테이블 야자</p>
-          <p class="MOD_FEATURE_Description">테이블 야자의 크기</p>
-        </div>
-      </a>
-    </div>
-    <div data-layout="ch8 ec4">
-      <a href="#" class="MOD_FEATURE_Container">
-        <img class="MOD_FEATURE_Picture" src="../assets/image/tablepalm/테이블야자5.jpg" alt="테이블야자">
-        <div class="MOD_FEATURE_TextContainer">
-          <p class="MOD_FEATURE_Title" data-theme="_ts2">테이블 야자</p>
-          <p class="MOD_FEATURE_Description">테이블 야자를 물에 심어 수경재배 하는 모습</p>
+          <p class="MOD_FEATURE_Title" data-theme="_ts2">아이비 알아보기</p>
         </div>
       </a>
     </div>
