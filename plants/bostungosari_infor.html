@@ -1,0 +1,296 @@
+<?php   
+include "./db.php"; 
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<!-- Start Head -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TRYY-식물을 키우는 사람들의 생각을 모아놓은곳</title>
+
+	<link rel="stylesheet" href="../assets/css/style.min.css">
+	<link rel="stylesheet" href="../assets/css/modules.css">
+
+	<!-- Google Structured Data -->
+	<script type="application/ld+json">
+	{
+	"@context" : "http://schema.org",
+	"@type" : "SoftwareApplication",
+	"name" : "Aperitif",
+	"image" : "https://aperitif.io/img/aperitif-logo.svg",
+	"url" : "https://aperitif.io/",
+	"author" : {
+	  "@type" : "Person",
+	  "name" : "Octavector"
+	},
+	"datePublished" : "2017-MM-DD",
+	"applicationCategory" : "HTML"
+	}
+	</script>
+</head>
+<!-- End Head -->
+
+<body class="default">
+
+<!--
+START MODULE AREA 1: header1
+-->
+<header class="MOD_HEADER1">
+  <div data-layout="_r">
+    <div data-layout="al16 de10" class="MOD_HEADER1_Title">
+      <button><a href="../index.html"><img src="../assets/image/Tryy(2).jpg"/></a></button>
+      <p class="MOD_HEADER1_Slogan">식물을 키우는 사람들의 생각을 모아놓은곳</p>
+    </div>
+	
+	<div data-layout="al16 de6" class="MOD_HEADER1_Details">	
+<?php	
+	if(isset($_SESSION['id'])) {
+		echo $_SESSION['name'];
+?>
+	<p>님 반갑습니다</p>
+	<button type="button" onclick="location.href='/member/logout.php'">로그아웃</button>
+<?php
+	}
+	else {
+?>	
+		<form method="post" action="/member/login_check.php">
+			<table align="center" border="0" cellspacing="0" width="400">
+				<tr>
+					<td width="300" colspan="1"> 
+						<input type="email" name="userid" placeholder="이메일"></input>
+					</td>
+					<td rowspan="3" colspan="1" align="center" width="130" > 
+						<button type="submit" class="btn" > 로그인 </button>
+					</td>
+					<td rowspan="3" colspan="1" align="center" width="130"> 
+						<a href="/member/signup.php" class="btn">회원가입</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="300" colspan="1"> 
+						<input type="password" name="userpw" placeholder="비밀번호"></input>
+					</td>
+				</tr>
+			</table>
+		</form>
+<?php
+	}
+?>
+	</div>
+	  
+  </div>
+</header>
+<!--
+END MODULE AREA 1: Header 1
+-->
+
+<!--
+START MODULE AREA 2: Menu 1
+-->
+<section class="MOD_MENU" data-theme="_bgp">
+  <div data-layout="_r" class="nopadding">
+    <nav class="MOD_MENU_Nav">
+      <p class="MOD_MENU_Title">Menu</p>
+      <svg class="MOD_MENU_Button" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+        <rect width="30" height="6"/>
+        <rect y="24" width="30" height="6"/>
+        <rect y="12" width="30" height="6"/>
+      </svg>
+      <ul class="AP_Menu_List">
+        <li>
+          <a href="../plants_recommend.html" data-theme="_bgp">식물 추천</a>
+        </li>
+        <li>
+          <a href="#" data-theme="_bgp">식물 검색</a>
+        </li>
+        <li>
+          <a href="#" data-theme="_bgp">식물 정보</a>
+        </li>
+        <li>
+          <a href="#" data-theme="_bgp">게시판</a>
+        </li>
+        <li>
+          <a href="#" data-theme="_bgp">고객센터</a>
+          <ul>
+            <li>
+              <a href="#" data-theme="_bgpd">문의하기</a>
+            </li>
+            <li>
+              <a href="#" data-theme="_bgpd">1:1 문의 내역</a>
+            </li>
+            <li>
+              <a href="#" data-theme="_bgpd">개발팀 위치</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<!--
+END MODULE AREA 2: Menu 1
+-->
+
+<!--
+START MODULE AREA 3: Image | Text | Text
+-->
+<section>
+  <div data-layout="_r">
+    <div data-layout="ch8 ec-third">
+      <img src="https://image.xplant.co.kr/data/item/15161/1516123516_l1.jpg" alt="보스턴고사리">
+    </div>
+    <div data-layout="ch8 ec-third">
+      <ul>
+        <li>이름 : 보스턴고사리</li>
+		<p></p>
+        <li>관리 수준 : 초보자</li>
+		<p></p>
+        <li>관리 요구 : 보통(약간 잘 견딤)</li>
+		<p></p>
+        <li>생육 온도 : 16~20℃ 최소 13℃ 이상</li>
+		<p></p>
+        <li>배치 장소 : 중간 광도, 높은 광도를 요구함. 거실, 발코니</li>
+		<p></p>
+        <li>물주기 : 흙을 촉촉하게 유지함, 겨울에는 표면이 말랐을때 충분히 관수</li>
+		<p></p>
+        <li>비료 정보 : 비료를 보통 요구함</li>
+      </ul> <!------------------- 수정완료 -->
+    </div>
+    <div data-layout="ec-third">
+        <ul>
+            <li>번식 방법 : 분주,기타</li>
+			<p></p>
+            <li>병충해 관리 : 진딧물,응애,깍지벌레,온실가루이</li>
+			<p></p>
+            <li>습도 : 70% 이상</li><p></p>
+            <li>성장 속도 : 빠름</li><p></p>
+            <li>생육 형태 : 풀모양</li><p></p>
+            <li>향기 : 없음</li>
+          </ul> <!----------------- 수정완료 -->
+    </div>
+  </div>
+</section>
+<!--
+END MODULE AREA 3: Image | Text | Text
+-->
+
+<!--
+  START MODULE AREA 4: Text | Text
+-->
+<section>
+  <div data-layout="_r">
+    <div data-layout="ch-half">
+      <p>유기질이 풍부한 화분용 배합토에서 잘 자라고, 뿌리가 화분 가득히 뻗어있는 것이 이상적이다. 한여름의 직사광선은 피하고 습도유지가 되어야 잘 자란다.</p>
+	  <p>잎에서 물이 기체 상태로 빠져나가는 작용 때문에 잎의 왁스층이 끈적끈적해지는데 이 과정에서 미세먼지가 달라붙어 초미세먼지를 없애는 데 효과가 좋다</p> 
+      <p>무독성 식물이기 때문에 반려동물을 안전하게 지켜주는 친화적인 식물이라는 장점도 있다.</p>   
+    </div>
+    <div data-layout="ch-half">
+      <p>풍성하고 아름다운 잎 때문에 빅토리아 시대부터 실내에 도입되어 사랑을 받아왔으며, 오늘날에도 여전히 인기가 높은 실내식물이다.</p>
+	  <p>건조한 상태보다 습한 상태를 좋아해 물을 자주 분무해 줘야 하며 햇빛이 잘 드는 밝은 곳에서 키우면 좋지만 음지에서도 잘 자란다.</p>
+      <p>실내재배 시 물이 부족하면 잎끝이 갈색으로 변하거나 떨어질 수 있으니 주의해야 한다.</p>
+    </div>
+  </div>
+</section>
+<!--
+  END MODULE AREA 4: Text | Text
+-->
+
+<!--
+START MODULE AREA 5: Feature 1
+-->
+<section class="MOD_FEATURE">
+  <div data-layout="_r">
+    <div data-layout="ch8 ec4">
+     <a href="../plants/daenamuyaja_infor.html" class="MOD_FEATURE_Container">
+        <img class="MOD_FEATURE_Picture" src="https://i2.wp.com/dilite.co.kr/wp-content/uploads/2018/04/bamboo-palm.jpg?resize=640%2C598" alt="테이블야자">
+        <div class="MOD_FEATURE_TextContainer">
+          <p class="MOD_FEATURE_Title" data-theme="_ts2">대나무야자 알아보기</p>
+        </div>
+      </a>
+    </div>
+    <div data-layout="ch8 ec4">
+	<a href="../plants/ivy_infor.html" class="MOD_FEATURE_Container">
+        <img class="MOD_FEATURE_Picture" src="http://mstatic2.e-himart.co.kr/contents/goods/00/00/87/62/41/0000876241__PROD96888007__M_640_640.jpg" alt="대나무야자">
+        <div class="MOD_FEATURE_TextContainer">
+          <p class="MOD_FEATURE_Title" data-theme="_ts2">아이비 알아보기</p>
+        </div>
+      </a>
+    </div>
+     <div data-layout="ch8 ec4">
+     <a href="fragrans.html" class="MOD_FEATURE_Container">
+        <img class="MOD_FEATURE_Picture" src="http://thum.buzzni.com/unsafe/640x640/http://cdn.image.buzzni.com/2016/05/30/2yRkBUvJP5.jpg" alt="행운목">
+        <div class="MOD_FEATURE_TextContainer">
+          <p class="MOD_FEATURE_Title" data-theme="_ts2">행운목 알아보기</p>
+        </div>
+      </a>
+    </div>
+	 <div data-layout="ch8 ec4">
+    <a href="./warneckii.html" class="MOD_FEATURE_Container">
+        <img class="MOD_FEATURE_Picture" src="../assets/image/드라세나와네키/드라세나와네키3.jpg" alt="드라세나와네키">
+        <div class="MOD_FEATURE_TextContainer">
+          <p class="MOD_FEATURE_Title" data-theme="_ts2">드라세나 와네키</p>
+        </div>
+      </a>
+  </div>
+ </div>
+</section>
+<!--
+END MODULE AREA 5: Feature 1
+-->
+
+<!--
+START MODULE AREA 6: Footer 1
+-->
+<footer>
+  <div class="MOD_FOOTER1" data-theme="_bgd">
+    <div data-layout="_r">
+      <div data-layout="ch8 ec4">
+        <h3>About us</h3>
+        <p>컴퓨터 과학과 17조 팀프로젝트 소프트웨어 설계, 제작 활동입니다. 
+		조원 : 강민철, 김원기, 조재준, 여상혁 </p>
+      </div>
+      <div data-layout="al16 ch8 ec4 ec-n4">
+        <h3>Links</h3>
+        <nav>
+          <ul>
+            <li><a href="../plants_recommend.html">식물 추천</a></li>
+            <li><a href="#">식물 검색</a></li>
+            <li><a href="#">식물 정보</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="./shop.html">상점</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div data-layout="ch8 ec4">
+        <h3>고객센터</h3>
+        <p>Email: <a href="mailto:#">TRYYteam@gmail.com</a><br>연락처: <a href="tel:#">01055328022</a>
+        </p>
+        <address>
+     경상대학교 만세<br>
+            경대 마을<br>
+            진주<br>
+            대한민국<br>
+            우편번호 : 989639
+          </address>
+      </div>
+    </div>
+  </div>
+  <div class="MOD_FOOTER1_Copyright" data-theme="_bgvd">
+    <div data-layout="_r" class="nopadding">
+      <div data-layout="al16">
+        <p>Copyright &copy; 2019소설프17조</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--
+END MODULE AREA 6: Footer 1
+-->
+
+<script src="../assets/js/index.js"></script>
+</body>
+
+</html>
+		
