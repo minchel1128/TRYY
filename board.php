@@ -22,8 +22,8 @@
             </tr>
         </thead>
         <?php
-          $sql = mq("select * from board order by idx desc limit 0,5"); // board테이블에있는 idx를 기준으로 내림차순해서 5개까지 표시
-            while($board = $sql->fetch_array(MYSQLI_ASSOC))
+          $sql = mq("select * from post_board order by idx desc limit 0,5"); // board테이블에있는 idx를 기준으로 내림차순해서 5개까지 표시
+            while($board = $sql->fetch_array())
             {
               $title=$board["title"]; 
               if(strlen($title)>30)
