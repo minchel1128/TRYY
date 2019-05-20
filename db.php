@@ -15,5 +15,4 @@ function mq($sql)
 		global $db;
 		return $db->query($sql);
 	}
-
 ?>
