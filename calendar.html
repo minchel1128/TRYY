@@ -1,0 +1,224 @@
+<?php   
+include "./db.php"; 
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<!-- Start Head -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TRYY-식물을 키우는 사람들의 생각을 모아놓은곳</title>
+
+	<link rel="stylesheet" href="assets/css/style.min.css">
+	<link rel="stylesheet" href="assets/css/modules.css">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+	<!-- Canonical URL usage -->
+	<link rel="canonical" href="https://aperitif.io/">
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:url"                content="https://aperitif.io/" />
+	<meta property="og:title"              content="Aperitif | The web template generator" />
+	<meta property="og:description"        content="Aperitif is a rapid web template generation tool." />
+	<meta property="og:image"              content="https://aperitif.io/img/aperitif-facebook.png" />
+	<meta property="og:image:width"        content="1200" />
+	<meta property="og:image:height"       content="630" />
+
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Aperitif">
+	<meta name="twitter:creator" content="@Aperitif">
+	<meta name="twitter:title" content="Aperitif - The web template generator">
+	<meta name="twitter:description" content="Aperitif is a rapid web template generation tool.">
+	<meta name="twitter:image" content="https://aperitif.io/img/aperitif-card.png">
+
+	<!-- Google Structured Data -->
+	<script type="application/ld+json">
+	{
+	"@context" : "http://schema.org",
+	"@type" : "SoftwareApplication",
+	"name" : "TRYY",
+	"image" : "https://aperitif.io/img/aperitif-logo.svg",
+	"url" : "https://aperitif.io/",
+	"author" : {
+	  "@type" : "Person",
+	  "name" : "Octavector"
+	},
+	"datePublished" : "2017-MM-DD",
+	"applicationCategory" : "HTML"
+	}
+	</script>
+</head>
+<!-- End Head -->
+
+<body class="default">
+
+<!--
+START MODULE AREA 1: Header 2
+-->
+<header class="MOD_HEADER1">
+  <div data-layout="_r">
+    <div data-layout="al16 de10" class="MOD_HEADER1_Title">
+      <button><a href="index.html"><img src="./assets/image/Tryy(2).jpg"/></a></button>
+      <p class="MOD_HEADER1_Slogan">식물을 키우는 사람들의 생각을 모아놓은곳</p>
+    </div>
+	
+	<div data-layout="al16 de6" class="MOD_HEADER1_Details">	
+<?php	
+	if(isset($_SESSION['id'])) {
+		echo $_SESSION['name'];
+?>
+	<p>님 반갑습니다</p>
+	<button type="button" onclick="location.href='/member/logout.php'">로그아웃</button>
+<?php
+	}
+	else {
+?>	
+		<form method="post" action="/member/login_check.php">
+			<table align="center" border="0" cellspacing="0" width="400">
+				<tr>
+					<td width="300" colspan="1"> 
+						<input type="email" name="userid" placeholder="이메일"></input>
+					</td>
+					<td rowspan="3" colspan="1" align="center" width="130" > 
+						<button type="submit" class="btn" > 로그인 </button>
+					</td>
+					<td rowspan="3" colspan="1" align="center" width="130"> 
+						<a href="/member/signup.php" class="btn">회원가입</a>
+					</td>
+				</tr>
+				<tr>
+					<td width="300" colspan="1"> 
+						<input type="password" name="userpw" placeholder="비밀번호"></input>
+					</td>
+				</tr>
+			</table>
+		</form>
+<?php
+	}
+?>
+	</div>
+	  
+  </div>
+</header>
+<!--
+END MODULE AREA 1: Blog Article
+-->
+
+<!--
+START MODULE AREA 2: Menu 1
+-->
+<section class="MOD_MENU" data-theme="_bgp">
+  <div data-layout="_r" class="nopadding">
+    <nav class="MOD_MENU_Nav">
+      <p class="MOD_MENU_Title">Menu</p>
+      <svg class="MOD_MENU_Button" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+        <rect width="30" height="6"/>
+        <rect y="24" width="30" height="6"/>
+        <rect y="12" width="30" height="6"/>
+      </svg>
+      <ul class="AP_Menu_List">
+        <li>
+          <a href="./plants_recommend.html" data-theme="_bgp">식물 추천</a>
+        </li>
+        <li>
+          <a href="#" data-theme="_bgp">식물 정보</a>
+        </li>
+        <li>
+          <a href="board.php" data-theme="_bgp">게시판</a>
+        </li>
+        <li>
+          <a href="calendar.html" data-theme="_bgp">기록판</a>
+        </li>
+		<div style = "width:350px; margin-top:8px;margin-bottom:-9px; margin-left:320px" >
+	<script>
+  (function() {
+    var cx = '010257307186003236634:rtlyb89duei';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
+  </div>
+      </ul>
+    </nav>
+  </div>
+</section>
+<!--
+END MODULE AREA 2: Menu 1
+-->
+
+<!--
+START MODULE AREA 3: Box Message 1
+-->
+<section class="MOD_BOXMESSAGE1" style="background-image:url(https://unsplash.it/1400/?random)">
+
+
+  <div class="MOD_BOXMESSAGE1_Message" data-theme="_bo1">
+    <iframe src="https://calendar.google.com/calendar/b/1/embed?height=500&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FSeoul&amp;src=a28uc291dGhfa29yZWEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%230B8043&amp;showTabs=1&amp;showPrint=0&amp;showCalendars=0&amp;showNav=1&amp;title=%EC%8B%9D%EB%AC%BC%20%EB%AC%BC%EC%A3%BC%EA%B8%B0%20%EA%B8%B0%EB%A1%9D%ED%8C%90" style="border-width:0" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+  </div>
+
+
+</section>
+<!--
+END MODULE AREA 3: Box Message 1
+-->
+
+<!--
+START MODULE AREA 4: Footer 1
+-->
+<footer>
+  <div class="MOD_FOOTER1" data-theme="_bgd">
+    <div data-layout="_r">
+      <div data-layout="ch8 ec4">
+        <h3>About us</h3>
+        <p>컴퓨터 과학과 17조 팀프로젝트 소프트웨어 설계, 제작 활동입니다. 
+		조원 : 강민철, 김원기, 조재준, 여상혁 </p>
+      </div>
+      <div data-layout="al16 ch8 ec4 ec-n4">
+        <h3>Links</h3>
+        <nav>
+          <ul>
+            <li><a href="./plants_recommend.html">식물 추천</a></li>
+            <li><a href="#">식물 정보</a></li>
+            <li><a href="board.php">게시판</a></li>
+            <li><a href="calendar.html">기록판</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div data-layout="ch8 ec4">
+        <h3>고객센터</h3>
+        <p>Email: <a href="mailto:#">TRYYteam@gmail.com</a><br>연락처: <a href="tel:#">01055328022</a>
+        </p>
+        <address>
+     경상대학교 만세<br>
+            경대 마을<br>
+            진주<br>
+            대한민국<br>
+            우편번호 : 989639
+          </address>
+      </div>
+    </div>
+  </div>
+  <div class="MOD_FOOTER1_Copyright" data-theme="_bgvd">
+    <div data-layout="_r" class="nopadding">
+      <div data-layout="al16">
+        <p>Copyright &copy; 2019소설프17조</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--
+END MODULE AREA 4: Footer 1
+-->
+
+<script src="assets/js/index.js"></script>
+</body>
+
+</html>
+			
