@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
-<meta charset="UTF-8">
-<title>게시판</title>
-<link rel="stylesheet" type="text/css" href="../../assets/css/index1.css" />
+	<meta charset="UTF-8">
+	<title>게시판</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/index1.css" />
 </head>
+
 <body>
     <div id="board_write">
         <h1><a href="board.php">자유게시판</a></h1>
