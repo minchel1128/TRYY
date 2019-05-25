@@ -34,7 +34,7 @@
       <tbody>
         <tr>
           <td width="70"><?php echo $board['idx']; ?></td>
-          <td width="500"><a href=""><?php echo $title;?></a></td>
+          <td width="500"><a href="/page/board/read.php?idx=<?php echo $board["idx"];?>"><?php echo $title;?></a></td>
           <td width="120"><?php echo $board['name']?></td>
           <td width="100"><?php echo $board['date']?></td>
           <td width="100"><?php echo $board['hit']; ?></td>
