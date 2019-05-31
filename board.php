@@ -3,6 +3,7 @@
 ?>
 <!doctype html>
 <head>
+<button><a href="index.html"><img src="./assets/image/Tryy(2).jpg"/></a></button>
 <meta charset="UTF-8">
 <title>게시판</title>
 <link rel="stylesheet" type="text/css" href="assets/css/index1.css" />
@@ -26,10 +27,6 @@
             while($board = $sql->fetch_array())
             {
               $title=$board["title"]; 
-              if(strlen($title)>30)
-              { 
-                $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]); //title이 30을 넘어서면 ...표시
-              }
         ?>
       <tbody>
         <tr>
